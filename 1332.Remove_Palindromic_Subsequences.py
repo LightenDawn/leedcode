@@ -57,3 +57,14 @@ class Solution(object):
         if s == s[::-1]: return 1
         if not s: return 0
         return len(set(s))
+
+
+#Solution 3 - (參考網路)
+
+class Solution(object):
+    def removePalindromeSub(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        return 2 - (s == s[::-1]) - (s == "")
